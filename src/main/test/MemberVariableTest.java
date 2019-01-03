@@ -5,46 +5,46 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 @RunWith(JUnit4.class)
-public class MemberTest {
+public class MemberVariableTest {
+    MemberVariable obj;
     @Before
     public void setUp() {
-        //System.out.println("Inside setup");
-        Member obj = new Member();
-        //MemberVariable obj2=new MemberVariable();
+        obj=new MemberVariable();
     }
     @Test
-    public void MemberTestSuccess()
+    public void MemberVariableSuccess()
     {
-        String expectedValue2="Name : Harry";
+        String expectedValue2="Harry Potter";
 
-        String actualValue2=obj.MemberName("Name");
+        String actualValue2=obj.dispName("Harry Potter");
 
         assertEquals(expectedValue2,actualValue2);
 
         int expectedValue3=30;
 
-        int actualValue3=obj.MemberAge("Age");
+        int actualValue3=obj.dispAge(30);
 
         assertEquals(expectedValue3,actualValue3);
 
-        String expectedValue4="2500.0";
+        String expectedValue4="2500.3";
 
-        String actualValue4=obj.MemberSalary("Salary");
+        String actualValue4=obj.dispSalary("2500.3");
 
         assertEquals(expectedValue4,actualValue4);
 
     }
 
     @Test
-    public void MemberTestFailure()
+    public void MemberVariableFailure()
     {
-        String expectedValue1="";
+        int expectedValue1 = 30;
 
-        String actualValue1=obj.MemberTest("DOB");
+        int actualValue1=obj.dispAge(20);
 
-        assertEquals(expectedValue1,actualValue1);
+        assertNotEquals(expectedValue1,actualValue1);
 
     }
 

@@ -24,7 +24,7 @@ public class IntegerFactorialTest {
     @Test
     public void getFactorial1Success() {
         String actualStr = f1.getFactorial(2);
-        String expectedStr = "The factorial of 1 is 1\n" + "The factorial of 2 is 2";
+        String expectedStr = "The factorial of 1 is 1\n" + "The factorial of 2 is 2\n";
         assertEquals(actualStr,expectedStr);
     }
 

@@ -8,10 +8,11 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class EvenTest {
+    EvenCheck obj;
     @Before
     public void setUp() {
         //System.out.println("Inside setup");
-        EvenNum obj = new EvenNum();
+        obj = new EvenCheck();
     }
     @Test
     public void EvenTestSuccess()
@@ -28,7 +29,7 @@ public class EvenTest {
     {
         boolean expectedValue1=false;
 
-        boolean actualValue1=obj.powerTest(35);
+        boolean actualValue1=obj.checkEven(35);
 
         assertEquals(expectedValue1,actualValue1);
 

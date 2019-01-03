@@ -8,10 +8,11 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class Powerof4Test {
+    Powerof4 obj;
     @Before
     public void setUp() {
         //System.out.println("Inside setup");
-        Powerof4 obj = new Powerof4();
+        obj = new Powerof4();
     }
     @Test
     public void powerTestSuccess()
