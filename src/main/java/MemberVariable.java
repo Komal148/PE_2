@@ -1,31 +1,22 @@
 public class MemberVariable {
+    Member m1;
+    MemberVariable() {
+         m1 = new Member();
+    }
     String dispName(String name)
     {
-        return name;
+        m1.setName(name);
+        return m1.getName();
     }
     int dispAge(int age)
     {
-        return age;
+        m1.setAge(age);
+        return m1.getAge();
     }
     String dispSalary(String salary)
     {
-        return salary;
-    }
-    public static void assignValue() {
-        Member m1 = new Member();
-        m1.name = "Harry Potter";
-        m1.age = 30;
-        m1.salary = "2500.3";
-
-
-//        Member m1 = new Member();
-//        m1.name = "Harry Potter";
-//        m1.age = 30;
-//        m1.salary = 2500.3;
-//        MemberVariable mv = new MemberVariable();
-//        mv.dispName(m1.name);
-//        mv.dispAge(m1.age);
-//        mv.dispSalary(m1.salary);
+        m1.setSalary(salary);
+        return m1.getSalary();
     }
 }
 
