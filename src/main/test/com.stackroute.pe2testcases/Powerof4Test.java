@@ -8,37 +8,33 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class Powerof4Test {
-    Powerof4 obj;
+    Powerof4 exponentObject;
+
     @Before
     public void setUp() {
-        //System.out.println("Inside setup");
-        obj = new Powerof4();
+        exponentObject = new Powerof4();
     }
+
     @Test
     public void powerTestSuccess()
     {
-        boolean expectedValue2=true;
-
-        boolean actualValue2=obj.powerTest(64);
-
-        assertEquals(expectedValue2,actualValue2);
+        boolean expectedValue = true;
+        boolean actualValue = exponentObject.powerTest(64);
+        assertEquals(expectedValue,actualValue);
     }
 
     @Test
     public void powerTestFailure()
     {
-        boolean expectedValue1=false;
-
-        boolean actualValue1=obj.powerTest(72);
-
-        assertEquals(expectedValue1,actualValue1);
+        boolean expectedValue = false;
+        boolean actualValue = exponentObject.powerTest(72);
+        assertEquals(expectedValue,actualValue);
 
     }
 
     @After
     public void tearDown(){
-        //System.out.println("Inside teardown");
-        obj=null;
+        exponentObject = null;
     }
 
 }

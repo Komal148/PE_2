@@ -1,0 +1,17 @@
+package com.stackroute.pe2;
+
+/*Write a Java method to check if a given number is power of 4*/
+
+public class Powerof4 {
+    boolean powerTest(int number){
+        if(number == 0)
+            return false;
+        while(number != 1)
+        {
+            if(number % 4 != 0)
+                return false;
+            number = number / 4;
+        }
+        return true;
+    }
+}

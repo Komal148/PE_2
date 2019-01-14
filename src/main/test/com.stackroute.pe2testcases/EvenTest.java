@@ -8,37 +8,33 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(JUnit4.class)
 public class EvenTest {
-    EvenCheck obj;
+    EvenCheck evenCheck;
+
     @Before
     public void setUp() {
-        //System.out.println("Inside setup");
-        obj = new EvenCheck();
+        evenCheck = new EvenCheck();
     }
     @Test
     public void EvenTestSuccess()
     {
-        boolean expectedValue2=true;
+        boolean expectedValue = true;
+        boolean actualValue2 = evenCheck.checkEven(64);
 
-        boolean actualValue2=obj.checkEven(64);
-
-        assertEquals(expectedValue2,actualValue2);
+        assertEquals(expectedValue,actualValue2);
     }
 
     @Test
     public void EvenTestFailure()
     {
-        boolean expectedValue1=false;
-
-        boolean actualValue1=obj.checkEven(35);
-
-        assertEquals(expectedValue1,actualValue1);
+        boolean expectedValue = false;
+        boolean actualValue1 = evenCheck.checkEven(35);
+        assertEquals(expectedValue,actualValue1);
 
     }
 
     @After
     public void tearDown(){
-        //System.out.println("Inside teardown");
-        obj=null;
+        evenCheck = null;
     }
 
 }
